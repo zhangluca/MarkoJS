@@ -1,29 +1,139 @@
-<div.container>
+<div class="container">
   <header>
-    <img.logo src="./logo.svg" alt="Marko"/>
+    <div class="image-container">
+      <img class="image" src="./78.jpg" alt="San juan"/>
+    </div>
   </header>
   <main>
-    <p>Edit <code>./src/routes/_index/+page.marko</code> and save to reload.</p>
-    <a href="https://markojs.com/docs/getting-started">
-      Learn Marko
-    </a>
+    <div class="subContainer">
+      <div>
+        <div style="background:blue">
+          <h3 style="color: lightBlue;">Allstate Extended Vehicle Care</h3>
+          <p style="color: white;">Protect your vehicle from unexpected repair costs</p>
+        </div>
+    $ const titles = ["Affordable Protection Plans", "100% of covered repair costs", "repair anywhere"];
+    $ const subtitles=["11Do not need to exactly same text or CSS.", "22Do not need to exactly same text or CSS.", "33Do not need to exactly same text or CSS."];
+<div>
+    <ul>
+        <for|title, index| of=titles>
+            <li><strong>${title}</strong></li>
+           <li> ${subtitles[index]}</li>
+        </for>
+    </ul>
+    </div>
+      </div>
+      <div class="right">
+        <h3 style="color: white;">Get a repair quotes</h3>
+        <form>
+        <div class="checkbox">
+         <div class="input-group" style="width:50%">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+</div>
+<div class="input-group" style="width:50%">
+ <label for="lname">Last Name </label>
+ <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+</div>
+<div class="input-group">
+ <label for="email">email address </label>
+ <input type="text" id="email" name="email" placeholder="Your email">
+</div>    
+ </div>
+  <div class="checkbox">
+   <label>Do not need to exactly same text or CSS
+  <input type="checkbox">
+</label>
+<label>Do not need to exactly same text or CSS
+  <input type="checkbox">
+</label>
+<label>Do not need to exactly same text or CSS
+  <input type="checkbox">
+</label>
+<label>Do not need to exactly same text or CSS
+  <input type="checkbox">
+</label>
+          </div>
+          <input class="button" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
   </main>
 </div>
-<mouse-mask/>
+
 
 style {
-  .container {
-    display:flex;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  font-size: clamp(1em, 2vw, 2em);
+  padding: 1em;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+  .input-group {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: clamp(1em, 2vw, 2em); 
-    padding: 1em;
-    box-sizing: border-box;
-    height:100%;
-    width:100%;
+    margin-bottom: 10px; 
   }
-  img.logo {
-    width:12em;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
+.subContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 10%;
+  width: 100%;
+}
+
+.checkbox {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.button {
+  background: orange;
+}
+
+.right {
+  background: navy;
+  width: 100%;
+}
+
+.image-container {
+height: 300px;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.image {
+  width: 100%; 
+  height: 100%; 
+    object-fit: cover;
+  object-position: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .subContainer {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    height: auto;
+  }
+}
 }
