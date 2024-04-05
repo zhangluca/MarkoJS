@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "dev": "marko-run",
-    "build": "marko-run build",
+    "build": "marko-run build --output public",
     "preview": "marko-run preview",
     "start": "node --enable-source-maps ./dist/index.mjs"
   }
